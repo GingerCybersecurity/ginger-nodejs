@@ -27,6 +27,6 @@ commands:
   command_type: target
   current_dir: /
   args:
-  - "app.js"
+  - "/usr/www/server.js"
   uid: 10
   gid: 10
