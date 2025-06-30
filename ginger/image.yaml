@@ -16,6 +16,8 @@ files:
     destination: '/sbin/node'
     uid: 10
     permissions: 0o500
+    capabilities:
+      - cap_mmap_exec
     label: 'nodejs_exec'
   - source: '/lib64/ld-linux-x86-64.so.2'
     destination: '/lib64/ld-linux-x86-64.so.2'
