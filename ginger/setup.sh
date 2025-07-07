@@ -1,6 +1,6 @@
 #!/bin/sh
 
-eth_internet="enX0"
+eth_internet="ens5"
 bridge=br0
 
 # Install modprobe for gingervm

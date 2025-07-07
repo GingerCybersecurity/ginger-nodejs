@@ -1,7 +1,7 @@
 disk:
-  type: 'raw'
-  path: '../target/disk_deployment.raw'
-  size_mib: 512
+  - type: 'raw'
+    path: '../target/disk_deployment.raw'
+    size_mib: 512
 dirs:
   - path: '/usr/www'
     uid: 10

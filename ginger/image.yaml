@@ -1,3 +1,7 @@
+disk:
+  - type: 'raw'
+    path: '../target/disk_image.raw'
+    size_mib: 256
 dirs:
   - path: '/lib'
     uid: 10
@@ -12,10 +16,19 @@ dirs:
     permissions: 0o700
     label: 'nodejs_lib'
 files:
-  - source: '/home/ubuntu/.nvm/versions/node/v22.17.0/bin/node'
-    destination: '/sbin/node'
+  #  - source: '/home/ubuntu/.nvm/versions/node/v22.17.0/bin/node'
+  #    destination: '/sbin/node'
+  #    uid: 10
+  #    permissions: 0o500
+  #    capabilities:
+  #      - cap_mmap_exec
+  #    label: 'nodejs_exec'
+  - source: '/home/ubuntu/ginger-nodejs/www/node-server'
+    destination: '/sbin/node-server'
     uid: 10
     permissions: 0o500
+    capabilities:
+      - cap_mmap_exec
     label: 'nodejs_exec'
   - source: '/lib64/ld-linux-x86-64.so.2'
     destination: '/lib64/ld-linux-x86-64.so.2'
