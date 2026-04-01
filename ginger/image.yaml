@@ -23,45 +23,45 @@ files:
   #    capabilities:
   #      - cap_mmap_exec
   #    label: 'nodejs_exec'
-  - source: '/home/ubuntu/ginger-nodejs/www/node-server'
+  - source: '/home/ubuntu/ginger-nodejs/dist/react2shell-demo'
     destination: '/sbin/node-server'
     uid: 10
     permissions: 0o500
     capabilities:
       - cap_mmap_exec
     label: 'nodejs_exec'
-  - source: '/lib64/ld-linux-x86-64.so.2'
-    destination: '/lib64/ld-linux-x86-64.so.2'
+  - source: '/lib/x86_64-linux-gnu/libatomic.so.1.2.0'
+    destination: '/lib/x86_64-linux-gnu/libatomic.so.1'
     uid: 10
     permissions: 0o500
-    label: 'nodejs_lib'
   - source: '/lib/x86_64-linux-gnu/libdl.so.2'
     destination: '/lib/x86_64-linux-gnu/libdl.so.2'
     uid: 10
     permissions: 0o500
-    label: 'nodejs_lib'
-  - source: '/lib/x86_64-linux-gnu/libstdc++.so.6'
-    destination: '/lib/x86_64-linux-gnu/libstdc++.so.6'
-    uid: 10
-    permissions: 0o500
-    label: 'nodejs_lib'
   - source: '/lib/x86_64-linux-gnu/libm.so.6'
     destination: '/lib/x86_64-linux-gnu/libm.so.6'
     uid: 10
     permissions: 0o500
-    label: 'nodejs_lib'
+  - source: '/lib/x86_64-linux-gnu/libstdc++.so.6.0.33'
+    destination: '/lib/x86_64-linux-gnu/libstdc++.so.6'
+    uid: 10
+    permissions: 0o500
   - source: '/lib/x86_64-linux-gnu/libgcc_s.so.1'
     destination: '/lib/x86_64-linux-gnu/libgcc_s.so.1'
     uid: 10
     permissions: 0o500
-    label: 'nodejs_lib'
   - source: '/lib/x86_64-linux-gnu/libpthread.so.0'
     destination: '/lib/x86_64-linux-gnu/libpthread.so.0'
     uid: 10
     permissions: 0o500
-    label: 'nodejs_lib'
   - source: '/lib/x86_64-linux-gnu/libc.so.6'
     destination: '/lib/x86_64-linux-gnu/libc.so.6'
     uid: 10
     permissions: 0o500
-    label: 'nodejs_lib'
+  - source: '/lib64/ld-linux-x86-64.so.2'
+    destination: '/lib64/ld-linux-x86-64.so.2'
+    uid: 10
+    permissions: 0o500
+
+
+
