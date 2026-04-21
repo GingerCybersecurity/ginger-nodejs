@@ -30,14 +30,6 @@ commands:
   args: [--stdout]
   uid: 2
   gid: 2
-    #- executable: '/sbin/node'
-    #  command_type: target
-    #  current_dir: /
-    #  args:
-    #  - "/usr/www/server.js"
-    #  - "--jitless"
-    #  uid: 10
-    #  gid: 10
 - executable: '/sbin/node-server'
   command_type: target
   current_dir: /
