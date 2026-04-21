@@ -24,10 +24,3 @@ files:
     uid: 1
     permissions: 0o400
     label: 'auditd_rules'
-
-  # Copy the web server
-  - source: '../www/*'
-    destination: '/usr/www/'
-    uid: 10
-    permissions: 0o400
-    label: 'nodejs_www'
