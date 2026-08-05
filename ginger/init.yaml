@@ -36,3 +36,4 @@ commands:
   args: []
   uid: 10
   gid: 10
+  allow_dynamic_code: true

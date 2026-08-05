@@ -20,9 +20,6 @@ files:
     destination: '/sbin/node-server'
     uid: 10
     permissions: 0o500
-    capabilities:
-      - cap_mmap_exec
-    label: 'nodejs_exec'
   - source: '/lib/x86_64-linux-gnu/libatomic.so.1.2.0'
     destination: '/lib/x86_64-linux-gnu/libatomic.so.1'
     uid: 10
@@ -55,6 +52,4 @@ files:
     destination: '/lib64/ld-linux-x86-64.so.2'
     uid: 10
     permissions: 0o500
-
-
 
