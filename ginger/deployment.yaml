@@ -6,21 +6,16 @@ dirs:
   - path: '/usr/www'
     uid: 10
     permissions: 0o700
-    label: 'nodejs_www'
 files:
   - source: 'init.yaml'
     destination: '/usr/etc/init.yaml'
     uid: 0
     permissions: 0o400
-    label: 'init_config'
-  - source: 'auditd.conf'
-    destination: '/usr/etc/auditd/auditd.conf'
-    uid: 0
-    gid: 1
-    permissions: 0o440
-    label: 'auditd_config'
   - source: 'auditd.rules'
     destination: '/usr/etc/auditd/auditd.rules'
     uid: 1
     permissions: 0o400
-    label: 'auditd_rules'
+  - source: 'log4rs.json'
+    destination: '/usr/etc/auditd/log4rs.json'
+    uid: 1
+    permissions: 0o400

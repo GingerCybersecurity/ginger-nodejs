@@ -6,22 +6,17 @@ networking:
     broadcast: 192.168.42.255
     gateway: 192.168.42.1
     dns:
-    - 10.0.0.2
+    - 1.1.1.1
 commands:
-- executable: /sbin/auditctl
-  command_type: setup
+- executable: /sbin/audit-rs
+  command_type: service
   current_dir: /
   args:
   - "-R"
   - "/usr/etc/auditd/auditd.rules"
-  uid: 1
-  gid: 1
-- executable: /sbin/auditd
-  command_type: setup
-  current_dir: /
-  args:
-  - "-c"
-  - "/usr/etc/auditd"
+  - "--config"
+  - "/usr/etc/auditd/log4rs.json"
+  - "--run"
   uid: 1
   gid: 1
 - executable: /sbin/measurerd

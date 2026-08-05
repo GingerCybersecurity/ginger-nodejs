@@ -6,20 +6,19 @@ dirs:
   - path: '/lib'
     uid: 10
     permissions: 0o700
-    label: 'nodejs_lib'
   - path: '/lib/x86_64-linux-gnu'
     uid: 10
     permissions: 0o700
-    label: 'nodejs_lib'
   - path: '/lib64'
     uid: 10
     permissions: 0o700
-    label: 'nodejs_lib'
 files:
   - source: '/home/ubuntu/ginger-nodejs/dist/node-server'
     destination: '/sbin/node-server'
     uid: 10
     permissions: 0o500
+    capabilities:
+    - cap_mmap_exec
   - source: '/lib/x86_64-linux-gnu/libatomic.so.1.2.0'
     destination: '/lib/x86_64-linux-gnu/libatomic.so.1'
     uid: 10

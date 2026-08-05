@@ -1,0 +1,59 @@
+{
+  "appenders": {
+    "stdout": {
+      "kind": "rolling_file",
+      "path": "/var/log/auditd/status.log",
+      "policy": {
+        "kind": "compound",
+        "trigger": {
+          "kind": "size",
+          "limit": 52428800
+        },
+        "roller": {
+          "kind": "fixed_window",
+          "base": 1,
+          "count": 1,
+          "pattern": "/var/log/auditd/status.{}.log"
+        }
+      },
+      "encoder": {
+        "kind": "json"
+      }
+    },
+    "audit": {
+      "kind": "rolling_file",
+      "path": "/var/log/auditd/audit.log",
+      "policy": {
+        "kind": "compound",
+        "trigger": {
+          "kind": "size",
+          "limit": 104857600
+        },
+        "roller": {
+          "kind": "fixed_window",
+          "base": 1,
+          "count": 2,
+          "pattern": "/var/log/auditd/audit.{}.log"
+        }
+      },
+      "encoder": {
+        "kind": "audit"
+      }
+    }
+  },
+  "loggers": {
+    "audit": {
+      "level": "info",
+      "additive": false,
+      "appenders": [
+        "audit"
+      ]
+    }
+  },
+  "root": {
+    "level": "info",
+    "appenders": [
+      "stdout"
+    ]
+  }
+}
